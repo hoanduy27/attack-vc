@@ -1,0 +1,5 @@
+logs
+egs/*/exp*
+egs/*/data
+__pycache__
+.ipynb_checkpoints

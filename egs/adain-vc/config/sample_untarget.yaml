@@ -1,0 +1,4 @@
+seed: 7
+n_speakers: 5
+utt_per_spk: 30
+adv_spk_per_spk: 0
