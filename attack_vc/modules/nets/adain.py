@@ -264,9 +264,9 @@ class Decoder(nn.Module):
         out = self.act(out)
         out = self.dropout_layer(out)
         for l in range(self.n_conv_blocks):
-            y (y)
-            y = append_cond(= pad_layer(out, self.first_conv_layers[l])
-            y = self.norm_layery, self.conv_affine_layers[l * 2](cond))
+            y = pad_layer(out, self.first_conv_layers[l])
+            y = self.norm_layer(y)
+            y = append_cond(y, self.conv_affine_layers[l * 2](cond))
             y = self.act(y)
             y = self.dropout_layer(y)
             y = pad_layer(y, self.second_conv_layers[l])

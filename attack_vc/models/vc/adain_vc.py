@@ -85,6 +85,3 @@ class AdversarialAdainVC(AdainVC):
     
         self.config = config 
 
-if __name__ == "__main__":
-    model = AdainVC.from_config('/home/duy/github/attack-vc/model/config_adv.yaml')
-
