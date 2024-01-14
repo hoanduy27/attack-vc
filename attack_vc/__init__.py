@@ -1,0 +1,1 @@
+from attack_vc.attackers.base import Attacker, TrainableAttacker

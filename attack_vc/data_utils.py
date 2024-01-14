@@ -14,9 +14,18 @@ from models import AdaInVC
 import soundfile as sf
 
 def inv_mel_matrix(sample_rate: int, n_fft: int, n_mels: int) -> np.array:
+    # F: stands for n_mels (for consistency)
+
+    # (F, sr//2 + 1)
     m = librosa.filters.mel(sr=sample_rate, n_fft=n_fft, n_mels=n_mels)
+    
+    # (F, F)
     p = np.matmul(m, m.T)
+
+    # (F,)
     d = [1.0 / x if np.abs(x) > 1e-8 else x for x in np.sum(p, axis=0)]
+    
+    # (F, F)
     return np.matmul(m.T, np.diag(d))
 
 

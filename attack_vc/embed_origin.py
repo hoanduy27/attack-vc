@@ -14,7 +14,7 @@ from data_utils import denormalize, file2mel, load_model, mel2wav, normalize
 import pandas as pd 
 import soundfile as sf
 
-from attack_vc.attacker import Attacker
+from attack_vc.attackers import Attacker
 
 
 if __name__ == "__main__":

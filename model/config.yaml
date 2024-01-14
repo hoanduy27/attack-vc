@@ -1,3 +1,5 @@
+ckpt_root: '/home/duy/github/attack-vc/model'
+
 model:
   SpeakerEncoder:
       c_in: 512
@@ -35,6 +37,7 @@ model:
       act: 'relu'
       sn: False
       dropout_rate: 0
+      
 preprocess:
   sample_rate: 24000
   preemph: 0.97
@@ -67,3 +70,4 @@ lambda:
     lambda_rec: 10
     lambda_kl: 1
 annealing_iters: 20000
+
